@@ -1,0 +1,94 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Calculator</title>
+<link rel='icon' href='favicon.jpg' />
+
+</head>
+<style type="text/css">
+
+.container{
+width: 100%;
+height: 100vh;
+background: lightgrey;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.calculator{
+background: black;
+padding: 20px;
+border-radius: 10px;
+}
+
+.calculator form input{
+border: 0;
+outline: 0;
+width: 60px;
+height: 60px;
+border-radius: 10px;
+background: grey;
+font-size: 20px;
+color: white;
+cursor: pointer;
+margin: 10px;
+}
+
+form input.screen{
+width: 315px;
+height: 75px;
+background: gray;
+color: white;
+text-align: right;
+font-size: 50px;
+}
+
+form input.answer{
+width: 145px;
+}
+
+</style>
+<body>
+
+<div class="container">
+<div class="calculator">
+<form>
+<div class="screen">
+<input type="text" name="screen" class="screen">
+<div>
+<div>
+<input type="button" value="AC" class="answer" onclick="screen.value=''">
+<input type="button" value="C" onclick="screen.value= screen.value.toString().slice(0,-1)">
+<input type="button" value="/" onclick="screen.value+='/'">
+<div>
+<div>
+<input type="button" value="7" onclick="screen.value+='7'">
+<input type="button" value="8" onclick="screen.value+='8'">
+<input type="button" value="9" onclick="screen.value+='9'">
+<input type="button" value="*" onclick="screen.value+='*'">
+<div>
+<div>
+<input type="button" value="4" onclick="screen.value+='4'">
+<input type="button" value="5" onclick="screen.value+='5'">
+<input type="button" value="6" onclick="screen.value+='6'">
+<input type="button" value="-" onclick="screen.value+='-'">
+<div>
+<div>
+<input type="button" value="1" onclick="screen.value+='1'">
+<input type="button" value="2" onclick="screen.value+='2'">
+<input type="button" value="3" onclick="screen.value+='3'">
+<input type="button" value="+" onclick="screen.value+='+'">
+<div>
+<div>
+<input type="button" value="0" onclick="screen.value+='0'">
+<input type="button" value="." onclick="screen.value+='.'">
+<input type="button" value="=" class="answer" onclick="screen.value= eval(screen.value)">
+<div>
+</form>
+</div>
+</div>
+
+</body>
+</html>
